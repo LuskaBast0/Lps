@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEKNOLUVAS — Blusão de Brim Antichamas | Soluções Industriais</title>
+  <meta
+    name="description"
+    content="Blusão de Brim Antichamas TEKNOLUVAS (C.A. 47.030). Confeccionado em brim antichamas com costura em linha de aramida para proteção térmica e operações de soldagem."
+  />
+  <meta property="og:title" content="TEKNOLUVAS — Blusão de Brim Antichamas" />
+  <meta
+    property="og:description"
+    content="Blusão de Brim Antichamas TEKNOLUVAS (C.A. 47.030). Proteção contra respingos de metais fundidos, calor radiante e pequenas chamas."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --color-primary: #2563eb;
+      --color-primary-dark: #1d4ed8;
+      --color-emerald: #059669;
+      --color-emerald-dark: #047857;
+      --color-brand-red: #dc2626;
+      --color-brand-navy: #1e3a8a;
+      --color-header-bg: rgba(206, 215, 226, 0.96);
+      --color-text-primary: #0f172a;
+      --color-text-secondary: #475569;
+      --color-text-muted: #64748b;
+      --color-surface: #ffffff;
+      --color-surface-alt: #f8fafc;
+      --color-media-bg: #cfd7e0;
+      --color-border: #e2e8f0;
+      --color-border-strong: #cbd5e1;
+      --color-error: #dc2626;
+      --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-surface);
+      color: var(--color-text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    h1, h2, h3, h4 {
+      text-wrap: balance;
+    }
+
+    .font-mono-tech {
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1152px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    /* ==================== HEADER ==================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      width: 100%;
+      background-color: var(--color-header-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.45);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .site-header.scrolled {
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    }
+
+    .header-inner {
+      height: 4rem;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .brand-link {
+      grid-column: 2;
+      justify-self: center;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .brand-link:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 3px;
+    }
+
+    .brand-emblem {
+      width: 2.5rem;
+      height: 2.5rem;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-title .red {
+      color: var(--color-brand-red);
+    }
+
+    .brand-title .navy {
+      color: var(--color-brand-navy);
+    }
+
+    .brand-subtitle {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: rgba(30, 58, 138, 0.88);
+      letter-spacing: 0.02em;
+      margin-top: 0.1875rem;
+    }
+
+    .header-actions {
+      grid-column: 3;
+      justify-self: end;
+      display: flex;
+      align-items: center;
+    }
+
+    .cart-toggle {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 9999px;
+      border: none;
+      background: transparent;
+      color: var(--color-text-primary);
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .cart-toggle:hover {
+      background-color: rgba(15, 23, 42, 0.08);
+    }
+
+    .cart-toggle:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .cart-toggle svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 1.25rem;
+      height: 1.25rem;
+      padding: 0 0.25rem;
+      border-radius: 9999px;
+      background-color: var(--color-primary);
+      color: #ffffff;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: scale(0);
+      transition: transform 0.2s ease;
+    }
+
+    .cart-badge.visible {
+      transform: scale(1);
+    }
+
+    /* ==================== BUTTONS ==================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.875rem;
+      line-height: 1.2;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+    }
+
+    .btn:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .btn:disabled {
+      cursor: default;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background-color: var(--color-primary-dark);
+    }
+
+    .btn-primary.is-added {
+      background-color: var(--color-emerald);
+    }
+
+    .btn-neutral {
+      background-color: #f1f5f9;
+      color: var(--color-text-primary);
+      border-color: var(--color-border);
+    }
+
+    .btn-neutral:hover:not(:disabled) {
+      background-color: #e2e8f0;
+    }
+
+    /* ==================== HERO SECTION (SKETCH TOP) ==================== */
+    .hero-section {
+      padding-top: 2.75rem;
+      padding-bottom: 3.5rem;
+      background-color: var(--color-surface);
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .product-kicker {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-primary-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.85rem, 3.2vw, 2.55rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: #020617;
+    }
+
+    .description-box {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--color-border-strong);
+      border-radius: 0.75rem;
+      background-color: var(--color-surface);
+      padding: 1.5rem 1.75rem;
+    }
+
+    .description-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #334155;
+    }
+
+    .quick-specs {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.875rem 1.25rem;
+      font-size: 0.875rem;
+    }
+
+    .spec-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--color-text-muted);
+      margin-bottom: 0.15rem;
+    }
+
+    .spec-value {
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .hero-actions {
+      margin-top: 1.5rem;
+      padding-top: 1.125rem;
+      border-top: 1px solid #f1f5f9;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .hero-actions .btn-primary {
+      flex: 1 1 210px;
+    }
+
+    .hero-media {
+      display: flex;
+    }
+
+    .media-frame {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background-color: var(--color-media-bg);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .media-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .img-fallback {
+      display: none;
+      padding: 2rem;
+      text-align: center;
+      color: #334155;
+    }
+
+    .media-frame.is-broken img {
+      display: none;
+    }
+
+    .media-frame.is-broken .img-fallback {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    /* ==================== INFORMAÇÕES SECTION (SKETCH MIDDLE) ==================== */
+    .info-section {
+      padding-top: 3.5rem;
+      padding-bottom: 4rem;
+      background-color: var(--color-surface);
+    }
+
+    .info-heading {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      text-align: center;
+      color: #020617;
+      margin-bottom: 2.5rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .details-column {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .detail-block {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .detail-block:last-child {
+      border-bottom: none;
+    }
+
+    .detail-block h3 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: #020617;
+      margin-bottom: 0.35rem;
+    }
+
+    .detail-block p {
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: var(--color-text-secondary);
+    }
+
+    .info-center-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .info-center-image .media-frame {
+      max-width: 360px;
+      aspect-ratio: 3 / 4;
+    }
+
+    /* ==================== PRODUTOS RELACIONADOS (SKETCH BOTTOM) ==================== */
+    .related-section {
+      padding-top: 3.5rem;
+      padding-bottom: 4.5rem;
+      background-color: var(--color-surface-alt);
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .related-heading {
+      font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+      font-weight: 800;
+      text-align: center;
+      color: #020617;
+      margin-bottom: 2.5rem;
+    }
+
+    .related-heading .highlight {
+      color: var(--color-primary);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -6px rgba(15, 23, 42, 0.08);
+    }
+
+    .product-card .media-frame {
+      border: none;
+      border-bottom: 1px solid #f1f5f9;
+      border-radius: 0;
+      background-color: #e2e7ee;
+    }
+
+    .product-card-body {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-card-meta {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .product-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #020617;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-card-desc {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--color-text-secondary);
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .product-card-actions {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .product-card-actions .btn {
+      width: 100%;
+      padding: 0.65rem 1rem;
+      font-size: 0.8rem;
+    }
+
+    /* ==================== FOOTER ==================== */
+    .site-footer {
+      background-color: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      padding: 2rem 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25rem;
+      font-size: 0.8125rem;
+    }
+
+    .footer-links a {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover {
+      color: #020617;
+    }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ==================== DRAWER & MODAL ==================== */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      background-color: rgba(2, 6, 23, 0.48);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 60;
+      width: 100%;
+      max-width: 28rem;
+      height: 100%;
+      background-color: var(--color-surface);
+      border-left: 1px solid var(--color-border);
+      box-shadow: -8px 0 30px rgba(15, 23, 42, 0.14);
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .drawer.active {
+      transform: translateX(0);
+    }
+
+    .drawer-header, .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .drawer-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #020617;
+    }
+
+    .icon-close-btn {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 9999px;
+      border: none;
+      background: transparent;
+      color: var(--color-text-muted);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .icon-close-btn:hover {
+      background-color: #f1f5f9;
+      color: #020617;
+    }
+
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .cart-empty {
+      padding: 3.5rem 1rem;
+      text-align: center;
+      color: var(--color-text-muted);
+      font-size: 0.875rem;
+    }
+
+    .cart-list {
+      list-style: none;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 0.875rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .cart-item:first-child {
+      padding-top: 0;
+    }
+
+    .cart-item-img {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 0.5rem;
+      object-fit: cover;
+      border: 1px solid var(--color-border);
+      background-color: #f1f5f9;
+      flex-shrink: 0;
+    }
+
+    .cart-item-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cart-item-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .cart-item-name {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #020617;
+    }
+
+    .cart-remove-btn {
+      border: none;
+      background: transparent;
+      color: #94a3b8;
+      cursor: pointer;
+      padding: 0.15rem;
+    }
+
+    .cart-remove-btn:hover {
+      color: var(--color-error);
+    }
+
+    .cart-item-ca {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: 0.125rem;
+    }
+
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      margin-top: 0.625rem;
+    }
+
+    .qty-btn {
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 9999px;
+      border: 1px solid var(--color-border-strong);
+      background-color: #f8fafc;
+      color: var(--color-text-primary);
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qty-btn:hover {
+      background-color: #e2e8f0;
+    }
+
+    .qty-value {
+      font-size: 0.875rem;
+      font-weight: 600;
+      min-width: 1.25rem;
+      text-align: center;
+    }
+
+    .obs-group {
+      margin-top: 1.25rem;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 0.35rem;
+    }
+
+    .field-input, .field-textarea {
+      width: 100%;
+      font-family: inherit;
+      font-size: 0.875rem;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid var(--color-border-strong);
+      border-radius: 0.5rem;
+      background-color: #ffffff;
+      color: var(--color-text-primary);
+    }
+
+    .field-input:focus, .field-textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+    }
+
+    .field-input.invalid {
+      border-color: var(--color-error);
+    }
+
+    .field-error {
+      font-size: 0.75rem;
+      color: var(--color-error);
+      margin-top: 0.25rem;
+      min-height: 1rem;
+    }
+
+    .drawer-footer {
+      padding: 1.25rem 1.5rem;
+      border-top: 1px solid var(--color-border);
+      background-color: var(--color-surface-alt);
+    }
+
+    .form-row {
+      margin-bottom: 0.65rem;
+    }
+
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.65rem;
+    }
+
+    .quote-ready-box {
+      border: 1px solid #a7f3d0;
+      background-color: #ecfdf5;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      display: none;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+
+    .quote-ready-box.active {
+      display: flex;
+    }
+
+    /* ==================== C.A. MODAL ==================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 70;
+      background-color: rgba(2, 6, 23, 0.52);
+      backdrop-filter: blur(2px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .modal-card {
+      width: 100%;
+      max-width: 32rem;
+      background-color: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 0.75rem;
+      box-shadow: 0 20px 40px -12px rgba(15, 23, 42, 0.25);
+      overflow: hidden;
+    }
+
+    .modal-header {
+      background-color: var(--color-surface-alt);
+    }
+
+    .modal-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .modal-top-info {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .modal-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      font-size: 0.875rem;
+    }
+
+    .modal-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--color-border);
+      background-color: var(--color-surface-alt);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .ca-portal-link {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .ca-portal-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ==================== RESPONSIVE BREAKPOINTS ==================== */
+    @media (min-width: 640px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .form-grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-inner {
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.75rem;
+      }
+
+      .hero-media .media-frame {
+        aspect-ratio: auto;
+        min-height: 390px;
+        height: 100%;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2.25rem;
+      }
+
+      .details-column.left .detail-block {
+        text-align: right;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================= -->
+  <!--                    HEADER                     -->
+  <!-- ============================================= -->
+  <header id="site-header" class="site-header">
+    <div class="container header-inner">
+      <a href="#produto" class="brand-link" aria-label="TEKNOLUVAS Soluções Industriais">
+        <div class="brand-text">
+          <div class="brand-title">
+            <span class="red">TEKNO</span><span class="navy">LUVAS</span>
+          </div>
+          <div class="brand-subtitle">Soluções Industriais</div>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <button id="cart-button" type="button" class="cart-toggle" aria-label="Abrir orçamento" aria-controls="cart-drawer">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+          <span id="cart-badge" class="cart-badge font-mono-tech">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================= -->
+    <!--         SEÇÃO 1: PRODUTO PRINCIPAL            -->
+    <!-- ============================================= -->
+    <section id="produto" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Coluna Esquerda: Nome + Descrição em Quadro -->
+          <div class="hero-left">
+            <div>
+              <p class="product-kicker font-mono-tech">C.A. 47.030 · Proteção Térmica e Soldagem · Linha Brim Antichamas</p>
+              <h1 class="hero-title">Blusão de Brim Antichamas TEKNOLUVAS</h1>
+            </div>
+
+            <div class="description-box">
+              <div>
+                <p class="description-text">
+                  Confeccionado em tecido brim pesado com tratamento antichamas e costurado integralmente com linha de aramida para máxima resistência térmica e mecânica. Projetado para proteger tronco e membros superiores contra pequenas chamas, calor radiante, calor de contato e respingos de metais fundidos em operações de soldagem.
+                </p>
+
+                <div class="quick-specs">
+                  <div>
+                    <span class="spec-label">Material e Costura</span>
+                    <span class="spec-value">Brim Antichamas · Linha de Aramida</span>
+                  </div>
+                  <div>
+                    <span class="spec-label">Fechamento</span>
+                    <span class="spec-value">Velcro reforçado e gola ajustável</span>
+                  </div>
+                  <div>
+                    <span class="spec-label">Tamanhos</span>
+                    <span class="spec-value">P, M, G, GG, XG e XXG</span>
+                  </div>
+                  <div>
+                    <span class="spec-label">Certificação</span>
+                    <span class="spec-value font-mono-tech">C.A. 47.030 (Válido)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-actions">
+                <button
+                  type="button"
+                  class="btn btn-primary add-to-cart-btn"
+                  data-id="tks-blusao-brim"
+                  data-name="Blusão de Brim Antichamas TEKNOLUVAS"
+                  data-ca="47.030"
+                  data-image="/images/blusao-brim-antichamas-main.jpg"
+                >
+                  Adicionar ao Orçamento
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-neutral consult-ca-btn"
+                  data-id="tks-blusao-brim"
+                >
+                  Consultar C.A.
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Imagem do Produto -->
+          <div class="hero-media">
+            <div class="media-frame">
+              <img
+                img src="blusao.webp"
+                alt="Blusão de Brim Antichamas TEKNOLUVAS com gola ajustável e costura em aramida"
+                referrerpolicy="no-referrer"
+                onerror="this.parentElement.classList.add('is-broken')"
+              />
+              <div class="img-fallback">
+                <strong>Blusão de Brim Antichamas TEKNOLUVAS</strong>
+                <span>C.A. 47.030 · Brim Antichamas com Aramida</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!--             SEÇÃO 2: INFORMAÇÕES              -->
+    <!-- ============================================= -->
+    <section id="informacoes" class="info-section">
+      <div class="container">
+        <h2 class="info-heading">Informações</h2>
+
+        <div class="info-grid">
+          <!-- 3 Detalhes à Esquerda -->
+          <div class="details-column left">
+            <div class="detail-block">
+              <h3>Tecido Brim Antichamas</h3>
+              <p>Confeccionado em brim de alta resistência com tratamento ignífugo para proteção eficaz contra calor, pequenas chamas e faíscas.</p>
+            </div>
+            <div class="detail-block">
+              <h3>Costura em Linha de Aramida</h3>
+              <p>Costuras reforçadas com fio de aramida que garantem durabilidade superior sob estresse térmico e resistência ao desgaste por abrasão.</p>
+            </div>
+            <div class="detail-block">
+              <h3>Velcro Frontal e Gola Ajustável</h3>
+              <p>Fechamento frontal prático em velcro de alta fixação e gola padre ajustável para proteção do pescoço e retirada ágil em campo.</p>
+            </div>
+          </div>
+
+          <!-- Imagem Central do Produto -->
+          <div class="info-center-image">
+            <div class="media-frame">
+              <img
+                img src="blusao.webp"
+                alt="Detalhe do tecido brim antichamas, gola ajustável e costura em aramida do Blusão TEKNOLUVAS"
+                referrerpolicy="no-referrer"
+                onerror="this.parentElement.classList.add('is-broken')"
+              />
+              <div class="img-fallback">
+                <strong>Detalhes Construtivos</strong>
+                <span>Costura em Aramida e Fechamento em Velcro</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Detalhes à Direita -->
+          <div class="details-column right">
+            <div class="detail-block">
+              <h3>Certificação Oficial C.A. 47.030</h3>
+              <p>Aprovado pelo Ministério do Trabalho para proteção contra calor convectivo, radiante, de contato, respingos fundidos e agentes escoriantes.</p>
+            </div>
+            <div class="detail-block">
+              <h3>Indicações de Soldagem</h3>
+              <p>Ideal para solda elétrica, MIG, TIG, oxiacetileno, micro plasma, corte a plasma, caldeiraria e serviços em áreas confinadas.</p>
+            </div>
+            <div class="detail-block">
+              <h3>Tamanhos e Conservação</h3>
+              <p>Disponível do P ao XXG. Lavagem até 60 °C sem alvejantes, secagem à sombra e passagem a ferro até 150 °C (não indicado para combate a incêndio).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!--        SEÇÃO 3: PRODUTOS RELACIONADOS         -->
+    <!-- ============================================= -->
+    <section id="produtos-relacionados" class="related-section">
+      <div class="container">
+        <h2 class="related-heading">Produtos <span class="highlight">Relacionados</span></h2>
+
+        <div class="products-grid">
+          <!-- Card 1 -->
+          <article class="product-card">
+            <div class="media-frame">
+              <img
+                src="/images/calca-brim-antichamas.jpg"
+                alt="Calça de Brim Antichamas TEKNOLUVAS"
+                referrerpolicy="no-referrer"
+                onerror="this.parentElement.classList.add('is-broken')"
+              />
+              <div class="img-fallback">
+                <strong>Calça de Brim Antichamas</strong>
+                <span>C.A. 47.031</span>
+              </div>
+            </div>
+            <div class="product-card-body">
+              <p class="product-card-meta font-mono-tech">C.A. 47.031 · Proteção Inferior</p>
+              <h3 class="product-card-title">Calça de Brim Antichamas</h3>
+              <p class="product-card-desc">Brim ignífugo costurado em linha de aramida para proteção completa das pernas em soldagem.</p>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-neutral consult-ca-btn" data-id="tks-calca-brim">Consultar C.A.</button>
+                <button
+                  type="button"
+                  class="btn btn-primary add-to-cart-btn"
+                  data-id="tks-calca-brim"
+                  data-name="Calça de Brim Antichamas TEKNOLUVAS"
+                  data-ca="47.031"
+                  data-image="/images/calca-brim-antichamas.jpg"
+                >
+                  Adicionar ao Orçamento
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="product-card">
+            <div class="media-frame">
+              <img
+                src="/images/avental-raspa-soldador.jpg"
+                alt="Avental de Raspa Ignífugo para Soldador TEKNOLUVAS"
+                referrerpolicy="no-referrer"
+                onerror="this.parentElement.classList.add('is-broken')"
+              />
+              <div class="img-fallback">
+                <strong>Avental de Raspa Ignífugo</strong>
+                <span>C.A. 39.845</span>
+              </div>
+            </div>
+            <div class="product-card-body">
+              <p class="product-card-meta font-mono-tech">C.A. 39.845 · Raspa Tratada</p>
+              <h3 class="product-card-title">Avental de Raspa Ignífugo</h3>
+              <p class="product-card-desc">Raspa bovina selecionada com tiras ajustáveis para barreira frontal contra respingos incandescentes.</p>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-neutral consult-ca-btn" data-id="tks-avental-raspa">Consultar C.A.</button>
+                <button
+                  type="button"
+                  class="btn btn-primary add-to-cart-btn"
+                  data-id="tks-avental-raspa"
+                  data-name="Avental de Raspa Ignífugo TEKNOLUVAS"
+                  data-ca="39.845"
+                  data-image="/images/avental-raspa-soldador.jpg"
+                >
+                  Adicionar ao Orçamento
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="product-card">
+            <div class="media-frame">
+              <img
+                src="/images/luva-raspa-soldador.jpg"
+                alt="Luva de Raspa Cano Longo para Soldador TEKNOLUVAS"
+                referrerpolicy="no-referrer"
+                onerror="this.parentElement.classList.add('is-broken')"
+              />
+              <div class="img-fallback">
+                <strong>Luva de Raspa Cano Longo</strong>
+                <span>C.A. 38.912</span>
+              </div>
+            </div>
+            <div class="product-card-body">
+              <p class="product-card-meta font-mono-tech">C.A. 38.912 · Soldagem Pesada</p>
+              <h3 class="product-card-title">Luva de Raspa Cano Longo</h3>
+              <p class="product-card-desc">Couro raspa com reforço palmar e costura em aramida para proteção das mãos e antebraços.</p>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-neutral consult-ca-btn" data-id="tks-luva-raspa">Consultar C.A.</button>
+                <button
+                  type="button"
+                  class="btn btn-primary add-to-cart-btn"
+                  data-id="tks-luva-raspa"
+                  data-name="Luva de Raspa Cano Longo TEKNOLUVAS"
+                  data-ca="38.912"
+                  data-image="/images/luva-raspa-soldador.jpg"
+                >
+                  Adicionar ao Orçamento
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="product-card">
+            <div class="media-frame">
+              <img
+                src="/images/perneira-raspa-velcro.jpg"
+                alt="Perneira de Raspa com Velcro TEKNOLUVAS"
+                referrerpolicy="no-referrer"
+                onerror="this.parentElement.classList.add('is-broken')"
+              />
+              <div class="img-fallback">
+                <strong>Perneira de Raspa com Velcro</strong>
+                <span>C.A. 40.218</span>
+              </div>
+            </div>
+            <div class="product-card-body">
+              <p class="product-card-meta font-mono-tech">C.A. 40.218 · Proteção Térmica</p>
+              <h3 class="product-card-title">Perneira de Raspa com Velcro</h3>
+              <p class="product-card-desc">Proteção para pernas e dorso do pé com fechamento prático em velcro contra fagulhas e abrasão.</p>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-neutral consult-ca-btn" data-id="tks-perneira-raspa">Consultar C.A.</button>
+                <button
+                  type="button"
+                  class="btn btn-primary add-to-cart-btn"
+                  data-id="tks-perneira-raspa"
+                  data-name="Perneira de Raspa com Velcro TEKNOLUVAS"
+                  data-ca="40.218"
+                  data-image="/images/perneira-raspa-velcro.jpg"
+                >
+                  Adicionar ao Orçamento
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================= -->
+  <!--                     FOOTER                    -->
+  <!-- ============================================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span><span style="color:#dc2626;">TEKNO</span><span style="color:#1e3a8a;">LUVAS</span></span>
+        <span style="color:#94a3b8; font-weight:400;">·</span>
+        <span style="font-size:0.75rem; color:#475569;">Soluções Industriais</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="#produto">Blusão Antichamas</a>
+        <a href="#informacoes">Informações</a>
+        <a href="#produtos-relacionados">Produtos Relacionados</a>
+        <a href="mailto:contato@teknoluvas.com">contato@teknoluvas.com</a>
+        <a href="tel:+551436643083" class="font-mono-tech">(14) 3664-3083</a>
+      </div>
+
+      <p class="footer-copy">© 2026 TEKNOLUVAS. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================= -->
+  <!--               DRAWER DE ORÇAMENTO             -->
+  <!-- ============================================= -->
+  <div id="drawer-overlay" class="overlay" aria-hidden="true"></div>
+
+  <aside id="cart-drawer" class="drawer" aria-labelledby="cart-heading" aria-hidden="true">
+    <div class="drawer-header">
+      <h3 id="cart-heading" class="drawer-title">Meu Orçamento</h3>
+      <button id="cart-close-button" type="button" class="icon-close-btn" aria-label="Fechar orçamento">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <div id="quote-ready-box" class="quote-ready-box">
+        <div>
+          <strong style="display:block; color:#020617; font-size:0.95rem;">Orçamento pronto para envio</strong>
+          <p style="font-size:0.85rem; color:#334155; margin-top:0.25rem;">
+            Clique abaixo para abrir o WhatsApp da TEKNOLUVAS com os itens e seus dados preenchidos.
+          </p>
+        </div>
+        <a id="whatsapp-send-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color:#059669;">
+          Enviar no WhatsApp
+        </a>
+        <button id="copy-quote-btn" type="button" class="btn btn-neutral">Copiar resumo do orçamento</button>
+        <button id="reset-quote-btn" type="button" class="btn btn-neutral" style="background:transparent; border:none; color:#475569;">
+          Concluir e limpar lista
+        </button>
+      </div>
+
+      <div id="cart-content-wrapper">
+        <div id="cart-empty" class="cart-empty">
+          Seu orçamento está vazio. Adicione itens da página para solicitar uma cotação.
+        </div>
+
+        <ul id="cart-items" class="cart-list"></ul>
+
+        <div id="obs-wrapper" class="obs-group" style="display:none;">
+          <label for="budget-observations" class="field-label">Observações (tamanhos, prazos, CNPJ)</label>
+          <textarea
+            id="budget-observations"
+            class="field-textarea"
+            rows="3"
+            placeholder="Ex: 20 unidades tamanho G, 15 unidades tamanho GG..."
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <form id="quote-form" class="drawer-footer" novalidate>
+      <div id="cart-form-error" class="field-error" style="margin-bottom:0.5rem;"></div>
+
+      <div class="form-row">
+        <label for="guest-name" class="field-label">Nome completo</label>
+        <input id="guest-name" type="text" class="field-input" placeholder="Seu nome ou empresa" required />
+        <div id="guest-name-error" class="field-error"></div>
+      </div>
+
+      <div class="form-grid-2">
+        <div class="form-row">
+          <label for="guest-email" class="field-label">E-mail</label>
+          <input id="guest-email" type="email" class="field-input" placeholder="compras@empresa.com" required />
+          <div id="guest-email-error" class="field-error"></div>
+        </div>
+        <div class="form-row">
+          <label for="guest-phone" class="field-label">Telefone (DDD)</label>
+          <input id="guest-phone" type="tel" class="field-input" placeholder="(14) 99999-8888" required />
+          <div id="guest-phone-error" class="field-error"></div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.25rem;">
+        Gerar Orçamento via WhatsApp
+      </button>
+    </form>
+  </aside>
+
+  <!-- ============================================= -->
+  <!--             MODAL DE CONSULTA C.A.            -->
+  <!-- ============================================= -->
+  <div id="ca-modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="ca-modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="ca-modal-title" class="drawer-title" style="font-size:1rem;">Consulta de Certificado de Aprovação (C.A.)</h3>
+        <button id="ca-modal-close" type="button" class="icon-close-btn" aria-label="Fechar modal de C.A.">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-top-info">
+          <div>
+            <span class="spec-label">Equipamento (EPI)</span>
+            <strong id="ca-modal-name" style="font-size:1.05rem; color:#020617;"></strong>
+          </div>
+          <div style="text-align:right; flex-shrink:0;">
+            <span class="spec-label">Número do C.A.</span>
+            <strong id="ca-modal-number" class="font-mono-tech" style="font-size:1.1rem; color:#1d4ed8;"></strong>
+          </div>
+        </div>
+
+        <div class="modal-specs-grid">
+          <div>
+            <span class="spec-label">Norma Técnica</span>
+            <span id="ca-modal-norm" class="spec-value font-mono-tech"></span>
+          </div>
+          <div>
+            <span class="spec-label">Situação MTE</span>
+            <span class="spec-value" style="color:#047857;">Ativo · Regularizado</span>
+          </div>
+          <div>
+            <span class="spec-label">Tamanhos</span>
+            <span id="ca-modal-sizes" class="spec-value"></span>
+          </div>
+          <div>
+            <span class="spec-label">Fabricante</span>
+            <span class="spec-value">TEKNOLUVAS</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="spec-label">Aplicações e Riscos Cobertos</span>
+          <p id="ca-modal-apps" style="font-size:0.875rem; color:#334155; margin-top:0.25rem;"></p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="https://caepi.mte.gov.br/" target="_blank" rel="noopener noreferrer" class="ca-portal-link">
+          Verificar no Portal CAEPI / MTE
+          <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </a>
+        <button id="ca-modal-add-btn" type="button" class="btn btn-primary" style="padding:0.6rem 1.25rem; font-size:0.8rem;">
+          Adicionar ao Orçamento
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!--                SCRIPT INLINE                  -->
+  <!-- ============================================= -->
+  <script>
+    (function () {
+      const PRODUCTS_DB = {
+        'tks-blusao-brim': {
+          id: 'tks-blusao-brim',
+          name: 'Blusão de Brim Antichamas TEKNOLUVAS',
+          ca: '47.030',
+          norm: 'ISO 11611 · Riscos Térmicos',
+          sizes: 'P, M, G, GG, XG e XXG',
+          image: '/images/blusao-brim-antichamas-main.jpg',
+          apps: 'Proteção do tronco e membros superiores contra pequenas chamas, calor radiante, convectivo e de contato, respingos de metais fundidos e agentes abrasivos em soldagem (MIG, TIG, elétrica, oxiacetileno e plasma).'
+        },
+        'tks-calca-brim': {
+          id: 'tks-calca-brim',
+          name: 'Calça de Brim Antichamas TEKNOLUVAS',
+          ca: '47.031',
+          norm: 'ISO 11611 · Riscos Térmicos',
+          sizes: 'P, M, G, GG, XG e XXG',
+          image: '/images/calca-brim-antichamas.jpg',
+          apps: 'Proteção dos membros inferiores do usuário contra agentes térmicos (pequenas chamas, calor de contato e respingos fundidos) e agentes abrasivos em operações de solda.'
+        },
+        'tks-avental-raspa': {
+          id: 'tks-avental-raspa',
+          name: 'Avental de Raspa Ignífugo TEKNOLUVAS',
+          ca: '39.845',
+          norm: 'ISO 11611 · Raspa Bovina',
+          sizes: '1,00 x 0,60 m · 1,20 x 0,60 m',
+          image: '/images/avental-raspa-soldador.jpg',
+          apps: 'Proteção frontal do tronco e coxas contra agentes abrasivos, escoriantes e térmicos provenientes de soldagem, corte a quente e manuseio de peças metálicas.'
+        },
+        'tks-luva-raspa': {
+          id: 'tks-luva-raspa',
+          name: 'Luva de Raspa Cano Longo TEKNOLUVAS',
+          ca: '38.912',
+          norm: 'EN 388 / EN 407 · Aramida',
+          sizes: '9 (G) e 10 (XG)',
+          image: '/images/luva-raspa-soldador.jpg',
+          apps: 'Proteção das mãos e antebraços contra agentes abrasivos, perfurantes, cortantes e térmicos (pequenas chamas, calor de contato e respingos fundidos) em solda pesada.'
+        },
+        'tks-perneira-raspa': {
+          id: 'tks-perneira-raspa',
+          name: 'Perneira de Raspa com Velcro TEKNOLUVAS',
+          ca: '40.218',
+          norm: 'ISO 11611 · Metatarso Protegido',
+          sizes: 'Único ajustável com velcro',
+          image: '/images/perneira-raspa-velcro.jpg',
+          apps: 'Proteção das pernas e dorso dos pés contra respingos de metais fundidos, fagulhas de soldagem e agentes abrasivos em caldeiraria e fundição.'
+        }
+      };
+
+      const STORAGE_KEY = 'teknoluvas_budget_cart_v2';
+      let cart = [];
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+        if (Array.isArray(saved)) cart = saved;
+      } catch (e) {
+        cart = [];
+      }
+
+      const header = document.getElementById('site-header');
+      const cartButton = document.getElementById('cart-button');
+      const cartBadge = document.getElementById('cart-badge');
+      const drawerOverlay = document.getElementById('drawer-overlay');
+      const cartDrawer = document.getElementById('cart-drawer');
+      const cartCloseButton = document.getElementById('cart-close-button');
+      const cartItemsEl = document.getElementById('cart-items');
+      const cartEmptyEl = document.getElementById('cart-empty');
+      const obsWrapperEl = document.getElementById('obs-wrapper');
+      const obsTextarea = document.getElementById('budget-observations');
+      const quoteForm = document.getElementById('quote-form');
+      const quoteReadyBox = document.getElementById('quote-ready-box');
+      const cartContentWrapper = document.getElementById('cart-content-wrapper');
+      const whatsappLink = document.getElementById('whatsapp-send-link');
+      const copyQuoteBtn = document.getElementById('copy-quote-btn');
+      const resetQuoteBtn = document.getElementById('reset-quote-btn');
+
+      const caModalBackdrop = document.getElementById('ca-modal-backdrop');
+      const caModalClose = document.getElementById('ca-modal-close');
+      const caModalAddBtn = document.getElementById('ca-modal-add-btn');
+      let currentModalProduct = null;
+      let preparedQuoteText = '';
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 8) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      function saveCart() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+        } catch (e) {}
+      }
+
+      function renderCart() {
+        cartItemsEl.innerHTML = '';
+        const hasItems = cart.length > 0;
+        cartEmptyEl.style.display = hasItems ? 'none' : 'block';
+        obsWrapperEl.style.display = hasItems ? 'block' : 'none';
+
+        cart.forEach((item) => {
+          const li = document.createElement('li');
+          li.className = 'cart-item';
+          li.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" class="cart-item-img" referrerpolicy="no-referrer" />
+            <div class="cart-item-info">
+              <div class="cart-item-head">
+                <span class="cart-item-name">${item.name}</span>
+                <button type="button" class="cart-remove-btn" data-remove-id="${item.id}" aria-label="Remover ${item.name}">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="cart-item-ca font-mono-tech">C.A. ${item.ca}</div>
+              <div class="qty-controls">
+                <button type="button" class="qty-btn" data-qty-id="${item.id}" data-delta="-1" aria-label="Diminuir quantidade">-</button>
+                <span class="qty-value font-mono-tech">${item.quantity}</span>
+                <button type="button" class="qty-btn" data-qty-id="${item.id}" data-delta="1" aria-label="Aumentar quantidade">+</button>
+              </div>
+            </div>
+          `;
+          cartItemsEl.appendChild(li);
+        });
+
+        const totalQty = cart.reduce((sum, i) => sum + i.quantity, 0);
+        cartBadge.textContent = String(totalQty);
+        cartBadge.classList.toggle('visible', totalQty > 0);
+        saveCart();
+      }
+
+      function openDrawer() {
+        cartDrawer.classList.add('active');
+        drawerOverlay.classList.add('active');
+        cartDrawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        cartDrawer.classList.remove('active');
+        drawerOverlay.classList.remove('active');
+        cartDrawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      function addProductToCart(productData) {
+        quoteReadyBox.classList.remove('active');
+        cartContentWrapper.style.display = 'block';
+        quoteForm.style.display = 'block';
+
+        const existing = cart.find((item) => item.id === productData.id);
+        if (existing) {
+          existing.quantity += 1;
+        } else {
+          cart.push({
+            id: productData.id,
+            name: productData.name,
+            ca: productData.ca,
+            image: productData.image,
+            quantity: 1
+          });
+        }
+        document.getElementById('cart-form-error').textContent = '';
+        renderCart();
+        openDrawer();
+      }
+
+      document.querySelectorAll('.add-to-cart-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const { id, name, ca, image } = btn.dataset;
+          if (!id || !name) return;
+
+          addProductToCart({ id, name, ca: ca || '', image: image || '' });
+
+          const originalText = btn.textContent;
+          btn.disabled = true;
+          btn.classList.add('is-added');
+          btn.textContent = 'Adicionado ✓';
+          window.setTimeout(() => {
+            btn.disabled = false;
+            btn.classList.remove('is-added');
+            btn.textContent = originalText;
+          }, 1300);
+        });
+      });
+
+      cartItemsEl.addEventListener('click', (e) => {
+        const qtyBtn = e.target.closest('[data-qty-id]');
+        if (qtyBtn) {
+          const id = qtyBtn.dataset.qtyId;
+          const delta = Number(qtyBtn.dataset.delta);
+          const item = cart.find((i) => i.id === id);
+          if (item) {
+            item.quantity += delta;
+            if (item.quantity <= 0) {
+              cart = cart.filter((i) => i.id !== id);
+            }
+            renderCart();
+          }
+          return;
+        }
+
+        const removeBtn = e.target.closest('[data-remove-id]');
+        if (removeBtn) {
+          const id = removeBtn.dataset.removeId;
+          cart = cart.filter((i) => i.id !== id);
+          renderCart();
+        }
+      });
+
+      cartButton.addEventListener('click', openDrawer);
+      cartCloseButton.addEventListener('click', closeDrawer);
+      drawerOverlay.addEventListener('click', closeDrawer);
+
+      // C.A. Modal Logic
+      function openCAModal(productId) {
+        const product = PRODUCTS_DB[productId];
+        if (!product) return;
+        currentModalProduct = product;
+        document.getElementById('ca-modal-name').textContent = product.name;
+        document.getElementById('ca-modal-number').textContent = product.ca;
+        document.getElementById('ca-modal-norm').textContent = product.norm;
+        document.getElementById('ca-modal-sizes').textContent = product.sizes;
+        document.getElementById('ca-modal-apps').textContent = product.apps;
+        caModalBackdrop.classList.add('active');
+      }
+
+      function closeCAModal() {
+        caModalBackdrop.classList.remove('active');
+        currentModalProduct = null;
+      }
+
+      document.querySelectorAll('.consult-ca-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          openCAModal(btn.dataset.id);
+        });
+      });
+
+      caModalClose.addEventListener('click', closeCAModal);
+      caModalBackdrop.addEventListener('click', (e) => {
+        if (e.target === caModalBackdrop) closeCAModal();
+      });
+
+      caModalAddBtn.addEventListener('click', () => {
+        if (!currentModalProduct) return;
+        const prod = currentModalProduct;
+        closeCAModal();
+        addProductToCart(prod);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (caModalBackdrop.classList.contains('active')) closeCAModal();
+          if (cartDrawer.classList.contains('active')) closeDrawer();
+        }
+      });
+
+      // Form Validation & Quote Generation
+      quoteForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nameInput = document.getElementById('guest-name');
+        const emailInput = document.getElementById('guest-email');
+        const phoneInput = document.getElementById('guest-phone');
+        const cartErr = document.getElementById('cart-form-error');
+        const nameErr = document.getElementById('guest-name-error');
+        const emailErr = document.getElementById('guest-email-error');
+        const phoneErr = document.getElementById('guest-phone-error');
+
+        [nameInput, emailInput, phoneInput].forEach((el) => el.classList.remove('invalid'));
+        [cartErr, nameErr, emailErr, phoneErr].forEach((el) => (el.textContent = ''));
+
+        let valid = true;
+
+        if (cart.length === 0) {
+          cartErr.textContent = 'Adicione pelo menos um item antes de enviar.';
+          valid = false;
+        }
+        if (!nameInput.value.trim()) {
+          nameInput.classList.add('invalid');
+          nameErr.textContent = 'O nome é obrigatório.';
+          valid = false;
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
+          emailInput.classList.add('invalid');
+          emailErr.textContent = 'Por favor, insira um e-mail válido.';
+          valid = false;
+        }
+        const phoneDigits = phoneInput.value.replace(/\D/g, '');
+        if (phoneDigits.length < 10) {
+          phoneInput.classList.add('invalid');
+          phoneErr.textContent = 'Telefone inválido (inclua o DDD).';
+          valid = false;
+        }
+
+        if (!valid) return;
+
+        const itemsText = cart
+          .map((item) => `*Produto:* ${item.name}\n*C.A.:* ${item.ca}\n*Quantidade:* ${item.quantity}`)
+          .join('\n\n');
+
+        const obs = obsTextarea.value.trim();
+        let message = `Olá! Gostaria de um orçamento para os seguintes itens:\n\n${itemsText}\n\n`;
+        if (obs) {
+          message += `*Observações:*\n${obs}\n\n`;
+        }
+        message += `*Meus Dados:*\n- Nome: ${nameInput.value.trim()}\n- Email: ${emailInput.value.trim()}\n- Telefone: ${phoneInput.value.trim()}\n\nAguardando retorno. Obrigado!`;
+
+        preparedQuoteText = message;
+        whatsappLink.href = `https://wa.me/551436643083?text=${encodeURIComponent(message)}`;
+
+        cartContentWrapper.style.display = 'none';
+        quoteForm.style.display = 'none';
+        quoteReadyBox.classList.add('active');
+      });
+
+      copyQuoteBtn.addEventListener('click', async () => {
+        if (!preparedQuoteText) return;
+        try {
+          await navigator.clipboard.writeText(preparedQuoteText);
+          copyQuoteBtn.textContent = 'Resumo copiado!';
+          window.setTimeout(() => {
+            copyQuoteBtn.textContent = 'Copiar resumo do orçamento';
+          }, 1800);
+        } catch (e) {}
+      });
+
+      resetQuoteBtn.addEventListener('click', () => {
+        cart = [];
+        obsTextarea.value = '';
+        renderCart();
+        quoteReadyBox.classList.remove('active');
+        cartContentWrapper.style.display = 'block';
+        quoteForm.style.display = 'block';
+        closeDrawer();
+      });
+
+      renderCart();
+    })();
+  </script>
+</body>
+</html>
